@@ -20,10 +20,10 @@ question_column_name: question
 answer_column_name: answer
 
 upload_user: Qwen
-model_type: Qwen3-30B-A3B-Instruct-2507
+model_type: Qwen3-8B
 pretrained_model_name: ${upload_user}/${model_type}
 revision: main
-reference_data_encoder_name: Qwen/Qwen3-30B-A3B-Instruct-2507
+reference_data_encoder_name: Qwen/Qwen3-8B
 left_padding: true
 is_enable_thinking: false
 
