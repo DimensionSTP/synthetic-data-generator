@@ -1,6 +1,6 @@
-# LLM model scaling pipeline
+# Synthetic data generating pipeline
 
-## For (s)LLM model scaling
+## For synthetic data generation
 
 ### Dataset
 
@@ -10,8 +10,8 @@ Any Structured Datasets
 
 ```bash
 # clone project
-git clone https://github.com/DimensionSTP/llm-fine-tune-hf.git
-cd llm-fine-tune-hf
+git clone https://github.com/DimensionSTP/synthetic-data-generator.git
+cd synthetic-data-generator
 
 # [OPTIONAL] create conda environment
 conda create -n myenv python=3.10 -y
