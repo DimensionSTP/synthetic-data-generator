@@ -352,15 +352,15 @@ def test_vllm_multi_turn(
 
         wandb.log({"test_results": wandb.Table(dataframe=result_df)})
         wandb.run.alert(
-            title="vLLM Multi-Turn Testing Complete",
-            text=f"Testing process on {config.dataset_name} has successfully finished.",
+            title="Synthetic QA Generation Complete",
+            text=f"QA generation on {config.dataset_name} has successfully finished.",
             level="INFO",
         )
 
     except Exception as e:
         wandb.run.alert(
-            title="vLLM Multi-Turn Testing Error",
-            text=f"An error occurred during testing on {config.dataset_name}: {e}",
+            title="Synthetic QA Generation Error",
+            text=f"An error occurred during generation on {config.dataset_name}: {e}",
             level="ERROR",
         )
         raise e
