@@ -363,4 +363,16 @@ def test_vllm_multi_turn(
             text=f"An error occurred during generation on {config.dataset_name}: {e}",
             level="ERROR",
         )
+        if results:
+            os.makedirs(config.output_dir, exist_ok=True)
+            output_path = os.path.join(
+                config.output_dir,
+                f"partial_{config.output_name}.jsonl",
+            )
+            pd.DataFrame(results).to_json(
+                output_path,
+                orient="records",
+                lines=True,
+                force_ascii=False,
+            )
         raise e
