@@ -107,6 +107,7 @@ def generate_synthetic_qa(
             question_gen_prompt = config.prompt.question.format(
                 category=category,
                 document=document,
+                gen_num_questions=config.gen_num_questions,
             )
 
             conversation_q = [
