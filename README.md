@@ -31,109 +31,20 @@ HF_HOME={HF_HOME}
 USER_NAME={USER_NAME}
 ```
 
-### Train
+### Generate
 
 * end-to-end
 
 ```shell
-python main.py mode=train
-```
-
-### Test
-
-* end-to-end
-
-```shell
-python main.py mode=test
-```
-
-* end-to-end(big model)
-
-```shell
-python main.py mode=test_large
+python main.py mode=generate
 ```
 
 ### Examples of shell scipts
 
-* full preprocessing
+* generate
 
 ```shell
-bash scripts/preprocess.sh
-```
-
-* dataset preprocessing
-
-```shell
-bash scripts/preprocess_dataset.sh
-```
-
-* train
-
-```shell
-bash scripts/train.sh
-```
-
-* test
-
-```shell
-bash scripts/test.sh
-```
-
-* test_large
-
-```shell
-bash scripts/test_large.sh
-```
-
-### Additional Options
-
-* SFT train(masking input)
-
-```shell
-is_sft={True or False}
-```
-
-* Use preprocessed tokenizer option
-
-```shell
-is_preprocessed={True or False}
-```
-
-* Left padding option
-
-```shell
-left_padding={True or False}
-```
-
-* Pure decoder based LLM QLoRA 4-bit quantization option
-
-```shell
-is_quantized={True or False}
-```
-
-* Pure decoder based LLM LoRA or QLoRA PEFT option
-
-```shell
-is_peft={True or False}
-```
-
-* For LLM full fine-tuning(Continued Pretraining) in multi-GPU, recommended
-
-```shell
-strategy=deepspeed
-```
-
-* Upload user name and model name at HuggingFace Model card
-
-```shell
-upload_user={upload_user} 
-model_type={model_type}
-```
-
-* Set data and target max length for model training and generation
-
-```shell
-max_length={max_length} 
+bash scripts/generate.sh
 ```
 
 __If you want to change main config, use --config-name={config_name}.__
