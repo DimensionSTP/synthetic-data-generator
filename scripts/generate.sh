@@ -2,7 +2,7 @@
 
 dataset_name="documents"
 upload_user="Qwen"
-model_type="Qwen3-30B-A3B-Instruct-2507"
+model_type="Qwen3-4B-Instruct-2507"
 revision="main"
 left_padding=True
 max_new_tokens=1024
