@@ -1,9 +1,5 @@
-from .pipeline import train, test, test_large, test_vllm, test_vllm_multi_turn
+from .pipeline import generate_synthetic_qa
 
 __all__ = [
-    "train",
-    "test",
-    "test_large",
-    "test_vllm",
-    "test_vllm_multi_turn",
+    "generate_synthetic_qa",
 ]
