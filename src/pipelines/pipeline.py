@@ -36,6 +36,12 @@ def generate_synthetic_qa(
 
     num_gpus = torch.cuda.device_count()
 
+    file_name = f"{config.dataset_name}.csv"
+    full_data_path = os.path.join(
+        config.data_dir,
+        file_name,
+    )
+
     try:
         df = pd.read_csv(
             full_data_path,
@@ -87,12 +93,6 @@ def generate_synthetic_qa(
         skip_special_tokens=True,
         stop_token_ids=[data_encoder.eos_token_id],
         **generation_config,
-    )
-
-    file_name = f"{config.dataset_name}.csv"
-    full_data_path = os.path.join(
-        config.data_dir,
-        file_name,
     )
 
     results = []
