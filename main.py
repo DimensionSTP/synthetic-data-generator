@@ -37,21 +37,13 @@ from src.pipelines import *
 
 @hydra.main(
     config_path="configs/",
-    config_name="generation.yaml",
+    config_name="generate.yaml",
 )
 def main(
     config: DictConfig,
 ) -> None:
-    if config.mode == "train":
-        return train(config)
-    elif config.mode == "test":
-        return test(config)
-    elif config.mode == "test_large":
-        return test_large(config)
-    elif config.mode == "test_vllm":
-        return test_vllm(config)
-    elif config.mode == "test_vllm_multi_turn":
-        return test_vllm_multi_turn(config)
+    if config.mode == "generate":
+        return generate_synthetic_qa(config)
     else:
         raise ValueError(f"Invalid execution mode: {config.mode}")
 
