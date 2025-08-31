@@ -11,15 +11,10 @@ class SetUp:
         self.config = config
 
     def get_data_encoder(self) -> PreTrainedTokenizer:
-        if self.config.is_preprocessed:
-            data_encoder_path = self.config.custom_data_encoder_path
-        else:
-            data_encoder_path = self.config.pretrained_model_name
-
         data_encoder = AutoTokenizer.from_pretrained(
-            data_encoder_path,
+            self.config.pretrained_model_name,
             use_fast=True,
-            revision=self.revision,
+            revision=self.config.revision,
         )
 
         if data_encoder.chat_template is None:
