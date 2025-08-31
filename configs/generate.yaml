@@ -27,7 +27,7 @@ reference_data_encoder_name: Qwen/Qwen3-4B-Instruct-2507
 left_padding: true
 is_enable_thinking: false
 
-max_new_tokens: 1024
+max_new_tokens: 2048
 do_sample: true
 generation_config:
   temperature: 0.6
