@@ -21,7 +21,7 @@ from huggingface_hub import snapshot_download
 from ..utils import SetUp
 
 
-def test_vllm(
+def generate_synthetic_qa(
     config: DictConfig,
 ) -> None:
     wandb.init(
