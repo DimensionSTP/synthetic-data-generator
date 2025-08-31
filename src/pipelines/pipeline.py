@@ -325,14 +325,14 @@ def test_vllm_multi_turn(
             config.output_dir,
             exist_ok=True,
         )
-        test_output_path = os.path.join(
+        output_path = os.path.join(
             config.output_dir,
             f"{config.output_name}.jsonl",
         )
 
         result_df = pd.DataFrame(results)
         result_df.to_json(
-            test_output_path,
+            output_path,
             orient="records",
             lines=True,
             force_ascii=False,
