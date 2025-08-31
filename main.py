@@ -37,7 +37,7 @@ from src.pipelines import *
 
 @hydra.main(
     config_path="configs/",
-    config_name="sft.yaml",
+    config_name="generation.yaml",
 )
 def main(
     config: DictConfig,
